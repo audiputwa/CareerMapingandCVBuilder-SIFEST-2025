@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Builder</title>
+    <link rel="stylesheet" href="CvBuilder.css" />
+  </head>
+  <body>
+   <!-- navbar section -->
+     <div class="navbar">
+     <div class="dropdown">
+    <a class="dropbtn" href="">Career Mapping
+      <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content">
+      <a href="../index.html" style="background-color: rgb(30, 185, 233); color: white;">Career Mapping</a>
+      <a href="../SoftwareDevelopmen/SoftwareDevelopmer.html">Software Developer</a>
+      <a href="../WebDeveloper/WebDeveloper.html">Web Developer</a>
+      <a href="../DigitalMarketing/DigitalMarketing.html">Digital Marketer</a>
+      <a href="../GraphicDisainer/GraphicDesigner.html">Graphic Designer</a>
+    </div>
+  </div>
+  <a href="../CvBuilder/CvBuilder.html">CV Builder</a>
+  <a href="../login/Login.html">Login</a>
+</div>
+<!-- cv builder section -->
+    <section
+      id="cv-section"
+      class="cv-builder"
+      role="tabpanel"
+      aria-hidden="false"
+      style="display: block"
+    >
+      <h2 style="text-align: center; margin-bottom: 20px">
+        Interactive CV Builder
+      </h2>
+
+      <form
+        id="cv-form"
+        aria-label="CV input form"
+        autocomplete="off"
+        spellcheck="false"
+        novalidate
+      >
+        <fieldset>
+          <legend>Contact Information</legend>
+          <label for="fullName">Nama</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Your full name"
+            required
+          />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+          <label for="phone">No.HP</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+62 812 3456 7890"
+          />
+          <label for="address">Alamat</label>
+          <input type="text" id="address" name="address" placeholder="Alamat" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Education</legend>
+          <label for="education">Education Details</label>
+          <textarea
+            id="education"
+            name="education"
+            rows="3"
+            placeholder="Degree, institution, graduation year..."
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Work Experience</legend>
+          <label for="experience">Experience Details</label>
+          <textarea
+            id="experience"
+            name="experience"
+            rows="4"
+            placeholder="Your job roles, responsibilities, achievements..."
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Skills</legend>
+          <label for="skills">List your skills (comma separated)</label>
+          <input
+            type="text"
+            id="skills"
+            name="skills"
+            placeholder="e.g. JavaScript, Communication, Teamwork"
+          />
+        </fieldset>
+      </form>
+
+      <section
+        class="cv-preview"
+        aria-live="polite"
+        aria-label="Live CV preview"
+        tabindex="0"
+      >
+        <h2>CV Preview</h2>
+        <div class="cv-contact">
+          <h3>Contact</h3>
+          <p id="preview-name"><em>Full name here</em></p>
+          <p id="preview-email"><em>Email here</em></p>
+          <p id="preview-phone"><em>Phone number here</em></p>
+          <p id="preview-address"><em>Address here</em></p>
+        </div>
+        <div class="cv-section">
+          <h3>Education</h3>
+          <p id="preview-education"><em>Education details here</em></p>
+        </div>
+        <div class="cv-section">
+          <h3>Experience</h3>
+          <p id="preview-experience"><em>Experience details here</em></p>
+        </div>
+        <div class="cv-section">
+          <h3>Skills</h3>
+          <p id="preview-skills"><em>Skills listed here</em></p>
+        </div>
+      </section>
+      <button onclick="exportToPDF()">Export ke PDF</button>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="CvBuilder.js"></script>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+/* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2a2a72, #009ffd);
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  h1 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0,0,0,0.4);
+  }
+  p.subtitle {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #b0edff;
+    text-shadow: 0 0 6px rgba(0,0,0,0.3);
+  }
+
+ /* Navbar container */
+.navbar {
+  overflow: hidden;
+  background: linear-gradient(135deg, #2a2a72, #009ffd);
+  font-family: Arial;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 22px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(30, 185, 233);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+  /* Career map container */
+  .career-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    width: 100%;
+  }
+
+  /* Each step box */
+  .step {
+    background: rgba(255 255 255 / 0.1);
+    border: 2px solid rgba(255 255 255 / 0.3);
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin-bottom: 20px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 7px rgba(0,0,0,0.18);
+  }
+  .step:hover, .step.active {
+    background: #00aaff;
+    border-color: #00e5ff;
+    box-shadow: 0 0 20px #00e5ff;
+  }
+  .step h2 {
+    margin: 0 0 6px;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  .step .level {
+    font-weight: 300;
+    font-size: 0.92rem;
+    color: #9de6ff;
+  }
+
+  /* Connector arrows */
+  .arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-top: 20px solid #00e5ff;
+    margin: 0 auto 20px;
+    filter: drop-shadow(0 2px 1px rgba(0,229,255,0.35));
+  }
+
+  /* Details panel */
+  .details {
+    background: rgba(255 255 255 / 0.12);
+    border-radius: 16px;
+    padding: 22px;
+    margin-top: 10px;
+    color: #ddf7ff;
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.42);
+    font-size: 0.96rem;
+    line-height: 1.48;
+    max-height: 220px;
+    overflow-y: auto;
+  }
+
+  /* Scrollbar for details panel - subtle */
+  .details::-webkit-scrollbar {
+    width: 7px;
+  }
+  .details::-webkit-scrollbar-thumb {
+    background: rgba(0, 229, 255, 0.55);
+    border-radius: 4px;
+  }
+
+  /* Responsive font sizes for smaller widths */
+  @media (max-width: 350px) {
+    h1 {
+      font-size: 1.45rem;
+    }
+    .step h2 {
+      font-size: 1.1rem;
+    }
+    .step {
+      padding: 15px 16px;
+    }
+    .details {
+      font-size: 0.91rem;
+      max-height: 180px;
+    }
+  }
